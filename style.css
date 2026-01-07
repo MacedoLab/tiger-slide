@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,700');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: white;
+    font-family: 'Oswalt', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider-content {
+    position: absolute;
+    z-index: 2;
+    text-align: left;
+    left: 10%;
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.meta {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2#slide-title {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#slide-status {
+    font-size: 1.2rem;
+    color: #c5a47e;
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+.slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 1;
+    filter: brightness(0.4);
+}
+
+.slide-img.active{
+    opacity: 1;
+}
+
+.nav-btn {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 3;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btn button {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 20px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    transition: 0.3s;
+}
+
+.nav-btn button:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Estilo do Quadro de Informação */
+#info-box {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    border-left: 4px solid #c5a47e;
+    z-index: 2;
+}
+
+#slide-description {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-weight: 300;
+}
