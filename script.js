@@ -3,7 +3,7 @@ const slidesData = [
     {
         title: "Leopardo<br>de Amur",
         status: "Criticamente em Perigo",
-        description: "O leopardo-de-amur é um dos felinos mais raros do mundo. Nativo do sudeste da Rússoa e norte da China, é conhecido por sua pelagem grossa adaptada ao clima frio."
+        description: "O leopardo-de-amur é um dos felinos mais raros do mundo. Nativo do sudeste da Rússia e norte da China, é conhecido por sua pelagem grossa adaptada ao clima frio."
     },
     {
         title: "Leão<br>Asiático",
