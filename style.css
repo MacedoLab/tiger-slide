@@ -108,7 +108,6 @@ h2#slide-title {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Estilo do Quadro de Informação */
 #info-box {
     position: absolute;
     right: 10%;
@@ -121,6 +120,26 @@ h2#slide-title {
     padding: 30px;
     border-left: 4px solid #c5a47e;
     z-index: 2;
+}
+
+#caracteristicas {
+    position: absolute;
+    left: 10%;
+    top: 75%;
+    transform: translateY(-50%);
+    width: 15%;
+
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-left: 4px solid #c5a47e;
+    z-index: 2;
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+    font-weight: 350;
 }
 
 #slide-description {
