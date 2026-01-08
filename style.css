@@ -131,15 +131,15 @@ h2#slide-title {
 
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
-    padding: 20px;
+    padding: 10px;
     border-left: 4px solid #c5a47e;
     z-index: 2;
 
     font-family: 'Oswald', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1.1rem;
+    line-height: 1.6;
     color: #e0e0e0;
-    font-weight: 350;
+    font-weight: 300;
 }
 
 #slide-description {
