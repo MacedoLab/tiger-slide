@@ -1,24 +1,33 @@
-// 1. Adicionamos a propriedade "description" em cada animal
 const slidesData = [
     {
         title: "Leopardo<br>de Amur",
         status: "Criticamente em Perigo",
-        description: "O leopardo-de-amur é um dos felinos mais raros do mundo. Nativo do sudeste da Rússia e norte da China, é conhecido por sua pelagem grossa adaptada ao clima frio."
+        description: "O leopardo-de-amur é um dos felinos mais raros do mundo. Nativo do sudeste da Rússia e norte da China, é conhecido por sua pelagem grossa adaptada ao clima frio.",
+        caracteristicas: "<strong>Peso:</strong> 32 a 48kg<br><strong>Comp:</strong> 1,0 a 1,4m<br><strong>Altura:</strong> 65 a 78cm"
     },
     {
         title: "Leão<br>Asiático",
         status: "Em perigo",
-        description: "Diferente dos leões africanos, o leão asiático possui uma juba menor e uma dobra de pele longitudinal ao longo da barriga. Hoje vivem apenas na Floresta de Gir, na Índia."
+        description: "Vivem exclusivamente na Floresta de Gir, na Índia. Diferenciam-se dos primos africanos pela juba menor e uma dobra de pele na barriga.",
+        caracteristicas: "<strong>Peso:</strong> 160 a 190kg<br><strong>Comp:</strong> 1,9 a 2,8m<br><strong>Altura:</strong> 1,0 a 1,2m"
     },
     {
         title: "Tigre<br>Siberiano",
-        status:"Endangered",
-        description: "Também conhecido como tigre-de-amur, é o maior felino do mundo. Um macho adulto pode pesar mais de 300kg. Eles são solitários e caçam grandes presas em florestas nevadas."
+        status:"Em perigo",
+        description: "O maior de todos os felinos. Solitário e poderoso, percorre imensas distâncias na neve para caçar. Um macho adulto é um predador sem rivais.",
+        caracteristicas: "<strong>Peso:</strong> 180 a 306kg<br><strong>Comp:</strong> 2,7 a 3,3m<br><strong>Altura:</strong> 1,1 a 1,2m"
     },
     {
         title: "Urso<br>Pardo",
         status: "Pouco Preocupante",
-        description: "O urso-pardo é um dos maiores carnívoros terrestres. Eles são onívoros e hibernam durantem o inverso. Sua força e tamanho impões respeito em todo o hemisfério norte."
+        description: "Um gigante onívoro. Embora sua população global esteja estável, subespécies locais enfrentam ameaças. Acumulam gordura no outono para hibernar.",
+        caracteristicas: "<strong>Peso:</strong> 250 a 600 kg<br><strong>Comp:</strong> 1,4 a 2,8 m<br><strong>Altura:</strong> Até 3,0 m (em pé)"
+    },
+    {
+        title: "Rinoceronte",
+        status: "Em perigo",
+        description: "O segundo maior mamífero terrestre. Apesar do nome, é cinza. Sua pele grossa funciona como armadura e seus chifres são feitos de queratina.",
+        caracteristicas: "<strong>Peso:</strong> 1.800 a 2.500 kg<br><strong>Comp:</strong> 3,4 a 4,2 m<br><strong>Altura:</strong> 1,5 a 1,8 m"
     }
 ];
 
@@ -26,8 +35,8 @@ let currentSlide = 0;
 
 const titleEl = document.getElementById('slide-title');
 const statusEl = document.getElementById('slide-status');
-// NOVO: Selecionamos o elemento da descrição
 const descEl = document.getElementById('slide-description');
+const caraEl = document.getElementById('slide-caracteristicas');
 
 const images = document.querySelectorAll('.slide-img');
 const nextBtn = document.getElementById('nextBtn');
@@ -37,18 +46,17 @@ function nextSlide(){
     currentSlide = (currentSlide + 1) % slidesData.length;
     images[currentSlide].classList.add('active');
 
-    // Adicionamos o descEl na lista de coisas para animar
-    gsap.to([titleEl, statusEl, descEl], {
+    gsap.to([titleEl, statusEl, descEl, caraEl], {
         duration: 0.2,
         opacity: 0,
         y: -20,
         onComplete: () => {
             titleEl.innerHTML = slidesData[currentSlide].title;
             statusEl.innerHTML = slidesData[currentSlide].status;
-            // NOVO: Atualiza o texto da descrição
             descEl.innerHTML = slidesData[currentSlide].description;
+            caraEl.innerHTML = slidesData[currentSlide].caracteristicas;
 
-            gsap.fromTo([titleEl, statusEl, descEl],
+            gsap.fromTo([titleEl, statusEl, descEl, caraEl],
                 {opacity: 0, y: 30 },
                 {duration: 0.8, opacity: 1, y: 0, ease: "power2.out"}
             );
