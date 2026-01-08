@@ -24,7 +24,7 @@ const slidesData = [
         caracteristicas: "<strong>Peso:</strong> 250 a 600 kg<br><strong>Comp:</strong> 1,4 a 2,8 m<br><strong>Altura:</strong> Até 3,0 m (em pé)"
     },
     {
-        title: "Rinoceronte",
+        title: "Rinoceronte<br>Marrom",
         status: "Em perigo",
         description: "O segundo maior mamífero terrestre. Apesar do nome, é cinza. Sua pele grossa funciona como armadura e seus chifres são feitos de queratina.",
         caracteristicas: "<strong>Peso:</strong> 1.800 a 2.500 kg<br><strong>Comp:</strong> 3,4 a 4,2 m<br><strong>Altura:</strong> 1,5 a 1,8 m"
